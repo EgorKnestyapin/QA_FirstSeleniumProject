@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class FindElementsTest {
+public class FindElementsTest extends TestBase {
     WebDriver driver;
 
     @BeforeMethod

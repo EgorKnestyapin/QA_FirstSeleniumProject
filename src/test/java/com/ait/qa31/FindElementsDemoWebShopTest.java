@@ -1,26 +1,12 @@
 package com.ait.qa31;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 import java.util.List;
 
-public class FindElementsDemoWebShopTest {
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://demowebshop.tricentis.com/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
+public class FindElementsDemoWebShopTest extends TestBase {
 
     @Test
     public void findElementByCssSelector() {
@@ -56,8 +42,4 @@ public class FindElementsDemoWebShopTest {
         System.out.println(elem3.getText());
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
 }
