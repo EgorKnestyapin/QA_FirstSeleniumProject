@@ -23,7 +23,8 @@ public class CreateAccountTests extends TestBase {
         WebElement emailInput = driver.findElement(By.id("Email"));
         emailInput.click();
         emailInput.clear();
-        emailInput.sendKeys("john1@gm.com");
+        String email = "john2@gm.com";
+        emailInput.sendKeys(email);
 
         WebElement passwordInput = driver.findElement(By.id("Password"));
         passwordInput.click();
@@ -37,6 +38,6 @@ public class CreateAccountTests extends TestBase {
 
         driver.findElement(By.id("register-button")).click();
 
-        isElementPresent(By.xpath("//a[text()='john1@gm.com']"));
+        isElementPresent(By.xpath(String.format("//a[text()='%s']", email)));
     }
 }
