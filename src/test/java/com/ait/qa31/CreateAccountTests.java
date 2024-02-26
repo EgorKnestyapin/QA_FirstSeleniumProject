@@ -2,6 +2,7 @@ package com.ait.qa31;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CreateAccountTests extends TestBase {
@@ -23,7 +24,7 @@ public class CreateAccountTests extends TestBase {
         WebElement emailInput = driver.findElement(By.id("Email"));
         emailInput.click();
         emailInput.clear();
-        String email = "john2@gm.com";
+        String email = "john3@gm.com";
         emailInput.sendKeys(email);
 
         WebElement passwordInput = driver.findElement(By.id("Password"));
@@ -38,6 +39,6 @@ public class CreateAccountTests extends TestBase {
 
         driver.findElement(By.id("register-button")).click();
 
-        isElementPresent(By.xpath(String.format("//a[text()='%s']", email)));
+        Assert.assertTrue(isElementPresent(By.xpath(String.format("//a[text()='%s']", email))));
     }
 }
