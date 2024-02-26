@@ -9,35 +9,20 @@ public class CreateAccountTests extends TestBase {
 
     @Test
     public void createNewAccountPositiveTest() {
-        driver.findElement(By.cssSelector("[href='/register']")).click();
+        click(By.cssSelector("[href='/register']"));
 
-        WebElement firstNameInput = driver.findElement(By.id("FirstName"));
-        firstNameInput.click();
-        firstNameInput.clear();
-        firstNameInput.sendKeys("John");
+        type(By.id("FirstName"), "John");
 
-        WebElement lastNameInput = driver.findElement(By.id("LastName"));
-        lastNameInput.click();
-        lastNameInput.clear();
-        lastNameInput.sendKeys("Smith");
+        type(By.id("LastName"), "Smith");
 
-        WebElement emailInput = driver.findElement(By.id("Email"));
-        emailInput.click();
-        emailInput.clear();
         String email = "john3@gm.com";
-        emailInput.sendKeys(email);
+        type(By.id("Email"), email);
 
-        WebElement passwordInput = driver.findElement(By.id("Password"));
-        passwordInput.click();
-        passwordInput.clear();
-        passwordInput.sendKeys("Qwerty123$");
+        type(By.id("Password"), "Qwerty123$");
 
-        WebElement confirmPasswordInput = driver.findElement(By.id("ConfirmPassword"));
-        confirmPasswordInput.click();
-        confirmPasswordInput.clear();
-        confirmPasswordInput.sendKeys("Qwerty123$");
+        type(By.id("ConfirmPassword"), "Qwerty123$");
 
-        driver.findElement(By.id("register-button")).click();
+        click(By.id("register-button"));
 
         Assert.assertTrue(isElementPresent(By.xpath(String.format("//a[text()='%s']", email))));
     }

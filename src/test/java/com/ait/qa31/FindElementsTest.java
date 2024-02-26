@@ -77,7 +77,7 @@ public class FindElementsTest extends TestBase {
         // driver.findElement(By.className("navigation-link"));
         driver.findElement(By.xpath("//*[@class='navigation-link']"));
         // any -> //*[attr='par']
-        driver.findElement(By.cssSelector("//*[@href='/search']"));
+        driver.findElement(By.xpath("//*[@href='/search']"));
         // by text
         driver.findElement(By.xpath("//*[text()='Find your car now!']"));
         driver.findElement(By.xpath("//*[.='Find your car now!']"));
