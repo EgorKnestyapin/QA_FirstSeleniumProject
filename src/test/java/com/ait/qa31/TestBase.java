@@ -40,4 +40,29 @@ public class TestBase {
     public boolean isElementPresent(By locator) {
         return !driver.findElements(locator).isEmpty();
     }
+
+    public void fillLoginRegisterForm(String email, String password) {
+        type(By.id("Email"), email);
+        type(By.id("Password"), password);
+    }
+
+    public void clickOnTheLoginButton() {
+        click(By.cssSelector(".button-1.login-button"));
+    }
+
+    public void clickOnTheLoginLink() {
+        click(By.cssSelector("[href='/login']"));
+    }
+
+    public void clickOnTheShoppingCart() {
+        click(By.xpath("//span[.='Shopping cart']"));
+    }
+
+    public void clickOnTheRegisterButton() {
+        click(By.id("register-button"));
+    }
+
+    public void clickOnTheRegisterLink() {
+        click(By.cssSelector("[href='/register']"));
+    }
 }

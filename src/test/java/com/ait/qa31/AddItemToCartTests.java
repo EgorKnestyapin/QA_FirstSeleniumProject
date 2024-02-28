@@ -11,18 +11,16 @@ import java.util.List;
 public class AddItemToCartTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
-        click(By.cssSelector("[href='/login']"));
-        type(By.id("Email"), "john3@gm.com");
-        type(By.id("Password"), "Qwerty123$");
-        click(By.cssSelector(".button-1.login-button"));
+        clickOnTheLoginLink();
+        fillLoginRegisterForm("john3@gm.com", "Qwerty123$");
+        clickOnTheLoginButton();
     }
 
     @Test
     public void addSecondItemToCartPositiveTest() {
         List<WebElement> buttons = driver.findElements(By.cssSelector(".button-2.product-box-add-to-cart-button"));
-        System.out.println(buttons.size());
         buttons.get(1).click();
-        click(By.xpath("//span[.='Shopping cart']"));
+        clickOnTheShoppingCart();
         Assert.assertTrue(isElementPresent(By.xpath("//a[.='14.1-inch Laptop']")));
     }
 }
