@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 
@@ -41,7 +39,7 @@ public class TestBase {
         return !driver.findElements(locator).isEmpty();
     }
 
-    public void fillLoginRegisterForm(String email, String password) {
+    public void fillLoginForm(String email, String password) {
         type(By.id("Email"), email);
         type(By.id("Password"), password);
     }
@@ -64,5 +62,18 @@ public class TestBase {
 
     public void clickOnTheRegisterLink() {
         click(By.cssSelector("[href='/register']"));
+    }
+
+    public void fillRegisterForm(String firstname, String lastname, String email, String password,
+                                 String confirmPassword) {
+        type(By.id("FirstName"), firstname);
+        type(By.id("LastName"), lastname);
+        type(By.id("Email"), email);
+        type(By.id("Password"), password);
+        type(By.id("ConfirmPassword"), confirmPassword);
+    }
+
+    public boolean isEmailTextPresent(String email) {
+        return isElementPresent(By.xpath(String.format("//a[text()='%s']", email)));
     }
 }

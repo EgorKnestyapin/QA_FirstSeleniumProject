@@ -12,7 +12,7 @@ public class AddItemToCartTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         clickOnTheLoginLink();
-        fillLoginRegisterForm("john3@gm.com", "Qwerty123$");
+        fillLoginForm("john3@gm.com", "Qwerty123$");
         clickOnTheLoginButton();
     }
 
