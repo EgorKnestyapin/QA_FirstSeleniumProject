@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.qa31.FindElementsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-03-04T17:07:20" hostname="DESKTOP-URUOCDB" time="8.012">
+  <properties/>
+  <testcase name="findElementByCssSelectorTest" classname="com.ait.qa31.FindElementsTest" time="0.058"/>
+  <testcase name="findElementByTagName" classname="com.ait.qa31.FindElementsTest" time="0.071"/>
+  <testcase name="findElementByXpath" classname="com.ait.qa31.FindElementsTest" time="0.11"/>
+  <testcase name="findElementsBySampleLocator" classname="com.ait.qa31.FindElementsTest" time="0.075"/>
+  <system-out><![CDATA[Find your car now!
+
+31
+Search
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

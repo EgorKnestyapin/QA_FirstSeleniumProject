@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ait.qa31.FindElementsDemoWebShopTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-03-04T17:07:56" hostname="DESKTOP-URUOCDB" time="33.662">
+  <properties/>
+  <testcase name="findElementByCssSelector" classname="com.ait.qa31.FindElementsDemoWebShopTest" time="0.118"/>
+  <testcase name="findElementsByXpath" classname="com.ait.qa31.FindElementsDemoWebShopTest" time="0.129"/>
+  <system-out><![CDATA[Sign up for our newsletter:
+Register
+Welcome to our store
+POPULAR TAGS
+COMMUNITY POLL
+Excellent
+Feel free to shop around and explore everything.
+FEATURED PRODUCTS
+14.1-inch Laptop
+View all
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
