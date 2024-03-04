@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="User" verbose="1">
-    <test name="User">
+<suite name="Regression" verbose="1">
+    <test name="Regression">
         <classes>
             <class name="com.ait.qa31.FindElementsTest"/>
             <class name="com.ait.qa31.FindElementsDemoWebShopTest"/>
